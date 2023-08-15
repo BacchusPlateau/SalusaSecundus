@@ -3,6 +3,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        var stage1 = new Stage1();
+        stage1.Stage1();
+
+        /*
         System.out.println("Hello and welcome!");
 
         Scanner scanner = new Scanner(System.in);
@@ -12,7 +16,7 @@ public class Main {
 
         String command = scanner.nextLine();
         System.out.println("Your command was: " + command);
-
+        */
 
 
     }
