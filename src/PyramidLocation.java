@@ -1,17 +1,52 @@
+import java.util.ArrayList;
+
 public class PyramidLocation {
 
-    private String _description; // = "You are stuck in a pyramid, sealed in by thieves who are afraid of the Mummy king";
-    private String _roomId; // = "Entrance";
+    public String Description; // = "You are stuck in a pyramid, sealed in by thieves who are afraid of the Mummy king";
+    public String RoomId; // = "Entrance";
 
+    public ArrayList<String> ItemsInRoom = new ArrayList<String>();
+    public boolean CanGoNorth = false;
+    public boolean CanGoSouth = false;
+    public boolean CanGoEast = false;
+    public boolean CanGoWest = false;
 
+    public String NorthRequiresItem = "";
+    public String NorthItemError = "";
+    public String SouthRequiresItem = "";
+    public String EastRequiresItem = "";
+    public String WestRequiresItem = "";
 
-    //ctor
-    PyramidLocation(String RoomId, String Description) {
+    public String DescriptionAndInventory() {
+        
+        String inventoryDescription = "";
+        for (String item : ItemsInRoom) {
+            inventoryDescription += "There is a " + item + " on the floor.\n";
+        }
+        
+        return Description + inventoryDescription;
+    }
+    
+    public boolean TryDirection(String direction, ArrayList<String> inventory) {
 
-        _roomId = RoomId;
-        _description = Description;
+        boolean success = false;
+
+        switch(direction) {
+            case "north":
+                if(CanGoNorth) {
+                    success = true;
+                    if(NorthRequiresItem != "") {
+                        if(!inventory.contains(NorthRequiresItem)) {
+                            success = false;
+                            System.out.println(NorthItemError);
+                        }
+                    }
+                }
+                break;
+        }
+
+        return success;
 
     }
-
 
 }
