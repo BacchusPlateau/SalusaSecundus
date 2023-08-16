@@ -13,8 +13,7 @@ public class Pyramid {
 
     public void GameLoop() {
 
-        System.out.println("Pyramid");
-
+        showSplash();
 
         Scanner scanner = new Scanner(System.in);
         String command = "";
@@ -83,7 +82,7 @@ public class Pyramid {
         entry.NorthItemError = "The door is locked.";
         entry.ItemsInRoom.add("Key");
         entry.Description = "You are in a room with walls, ceilings and floor of stone.\n" +
-                "There is a locked door to the north.\n" +
+                "There is a door to the north.\n" +
                 "There is a passage to the east.\n";
 
         Locations[4][0] = entry;
@@ -96,6 +95,21 @@ public class Pyramid {
 
     }
 
+    private void showSplash() {
+        System.out.println("***********************************************************************************");
+        System.out.println("*                                                                                 *");
+        System.out.println("*    *******  **   **  *******  *******  **   **  *******  *****                  *");
+        System.out.println("*    **   **  **   **  **   **  **   **  *******  *******  **   *                 *");
+        System.out.println("*    *******  *******  *******  *******  ** * **    ***    **    *                *");
+        System.out.println("*    **         ***    ** **    **   **  **   **    ***    **    *                *");
+        System.out.println("*    **         ***    **  **   **   **  **   **  *******  **   *                 *");
+        System.out.println("*    **         ***    **   **  **   **  **   **  *******  *****                  *");
+        System.out.println("*                                                                                 *");
+        System.out.println("***********************************************************************************");
+    }
 
+    private void showInstructions() {
+
+    }
 
 }
