@@ -4,8 +4,8 @@ public class Main {
        // Pyramid pyramid = new Pyramid();
        // pyramid.GameLoop();
 
-        Stage1 s = new Stage1();
-        s.Stage1();
+     Stage1_1 stage1_1 = new Stage1_1();
+     stage1_1.Stage1_1();
 
     }
 }
